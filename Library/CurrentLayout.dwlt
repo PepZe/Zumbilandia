@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 474}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 74
+  controlID: 30
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 474}
   m_MaxSize: {x: 18006, y: 14024}
   vertical: 0
-  controlID: 118
+  controlID: 96
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,7 +175,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 524}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -296,14 +296,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.7840426
+    - e00: 0.96173143
       e01: 0
       e02: 0
-      e03: -74.44995
+      e03: -220.78235
       e10: 0
-      e11: 0.7840426
+      e11: 0.96173143
       e12: 0
-      e13: 133.9329
+      e13: 166.6417
       e20: 0
       e21: 0
       e22: 1
@@ -313,10 +313,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 4790c7e90f3ca134996f8056e39c55ac,
+  m_AnimatorController: {fileID: 9100000, guid: e2d0e37c7b86aa24eb6e9525e69acc30,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107785961134748038, guid: 4790c7e90f3ca134996f8056e39c55ac,
+  - m_Target: {fileID: 1107865195438754738, guid: e2d0e37c7b86aa24eb6e9525e69acc30,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -394,19 +394,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Personagens
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Personagens
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Pedro-Git\Zumbilandia
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c80d0000
-    m_LastClickedID: 3528
+    scrollPos: {x: 0, y: 19}
+    m_SelectedIDs: 9a0d0000
+    m_LastClickedID: 3482
     m_ExpandedIDs: 000000004c0b0000820b00009a0d0000e8120000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c0b0000820b00009a0d0000
+    m_ExpandedIDs: 000000004c0b0000820b00009a0d0000e8120000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -554,8 +554,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 061a0000
-      m_LastClickedID: 6662
+      m_SelectedIDs: 581a0000
+      m_LastClickedID: 6744
       m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.9732895, y: -18.366455, z: -1.0258954}
+    m_Target: {x: -14.924139, y: -25.005608, z: -15.571468}
     speed: 2
-    m_Value: {x: 12.9732895, y: -18.366455, z: -1.0258954}
+    m_Value: {x: -14.924139, y: -25.005608, z: -15.571468}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -641,13 +641,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.004882716, y: -0.95511395, z: 0.29577857, w: 0.015768593}
+    m_Target: {x: -0.027145734, y: -0.8349934, z: 0.54803157, w: -0.041359015}
     speed: 2
-    m_Value: {x: 0.004882716, y: -0.95511395, z: 0.29577857, w: 0.015768593}
+    m_Value: {x: -0.027145734, y: -0.8349934, z: 0.54803157, w: -0.041359015}
   m_Size:
-    m_Target: 65.22615
+    m_Target: 76.913345
     speed: 2
-    m_Value: 65.22615
+    m_Value: 76.913345
   m_Ortho:
     m_Target: 0
     speed: 2

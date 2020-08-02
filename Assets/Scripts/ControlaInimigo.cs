@@ -16,7 +16,6 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     public GameObject KitMedico;
     public Vector3 Direcao;
     private Vector3 _posicaoAleatoria;
-    private Rigidbody _rigidbodyInimigo;
 
     private ControlaInterface _scriptControlaInterface;
     private ControlaAnimacao _scriptControlaAnimacao;
@@ -32,8 +31,6 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     {
         Jogador = GameObject.FindWithTag(Tags.Jogador);
 
-        _rigidbodyInimigo = GetComponent<Rigidbody>();
-
         StatusInimigo = GetComponent<Status>();
         _scriptControlaAnimacao = GetComponent<ControlaAnimacao>();
         _scriptMovimentaInimigo = GetComponent<MovimentaPersonagem>();
@@ -43,7 +40,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     }
     void FixedUpdate()  
     {
-        float distancia = Vector3.Distance(_rigidbodyInimigo.position, Jogador.transform.position);
+        float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
         _scriptControlaAnimacao.AnimarMovimento(Direcao);
         _scriptMovimentaInimigo.Rotacionar(Direcao);
@@ -54,14 +51,14 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         }
         else if (distancia > 2.5)
         {
-            Direcao = Jogador.transform.position - _rigidbodyInimigo.position;
+            Direcao = Jogador.transform.position - transform.position;
 
             _scriptMovimentaInimigo.Movimentar(Direcao, StatusInimigo.Velocidade);
             _scriptControlaAnimacao.Atacar(false);
         }
         else
         {
-            Direcao = Jogador.transform.position - _rigidbodyInimigo.position;
+            Direcao = Jogador.transform.position - transform.position;
             _scriptControlaAnimacao.Atacar(true);
         }
     }
@@ -73,7 +70,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         if (_contadorVagar <= 0)
         {
             _posicaoAleatoria = AleatorizarPosicao();
-            _contadorVagar += _tempoEntrePosicoesAleatorias;
+            _contadorVagar += _tempoEntrePosicoesAleatorias + Random.Range(-1f, 1f);
         }
         bool ficouPertoOSuficiente = Vector3.Distance(transform.position, _posicaoAleatoria) <= 0.1;
 
