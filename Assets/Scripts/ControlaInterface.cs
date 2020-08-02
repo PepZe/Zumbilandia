@@ -14,7 +14,9 @@ public class ControlaInterface : MonoBehaviour
     public GameObject PainelDeGameOver;
     public Text TextoFimDeJogo;
     public Text TextoPontuacaoMaxima;
+    public Text TextoQntZumbis;
     private float _tempoMaximoSobrevivencia;
+    private int _qntdZumbisMortos = 0;
     private const string MAXIMA_PONTUACAO = "Maxima Pontuacao";
 
     void Start()
@@ -30,6 +32,12 @@ public class ControlaInterface : MonoBehaviour
     {
         SliderVidaJogador.value = _scriptControlaJogador._statusJogador.Vida;
     }
+
+    public void AtualizarQndZumbisMortos()
+    {
+        TextoQntZumbis.text = $"x {++_qntdZumbisMortos}";
+    }
+
     public void GameOver()
     {
         Time.timeScale = 0;

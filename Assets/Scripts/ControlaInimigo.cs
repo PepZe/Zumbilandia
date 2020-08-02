@@ -12,11 +12,14 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     public Status _statusInimigo;
 
     public GameObject KitMedico;
-    public Vector3 _direcao;
+    public Vector3 Direcao;
     private Vector3 _posicaoAleatoria;
     private Rigidbody _rigidbodyInimigo;
+
+    private ControlaInterface _scriptControlaInterface;
     private ControlaAnimacao _scriptControlaAnimacao;
     private MovimentaPersonagem _scriptMovimentaInimigo;
+
     private float _contadorVagar;
     private float _tempoEntrePosicoesAleatorias = 4;
     private float _porcentagemGerarKitMedico = 0.1f;
@@ -32,6 +35,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         _statusInimigo = GetComponent<Status>();
         _scriptControlaAnimacao = GetComponent<ControlaAnimacao>();
         _scriptMovimentaInimigo = GetComponent<MovimentaPersonagem>();
+        _scriptControlaInterface = FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;
 
         AleatorizarZumbi();
     }
@@ -39,8 +43,8 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     {
         float distancia = Vector3.Distance(_rigidbodyInimigo.position, Jogador.transform.position);
 
-        _scriptControlaAnimacao.AnimarMovimento(_direcao);
-        _scriptMovimentaInimigo.Rotacionar(_direcao);
+        _scriptControlaAnimacao.AnimarMovimento(Direcao);
+        _scriptMovimentaInimigo.Rotacionar(Direcao);
 
         if (distancia > 15)
         {
@@ -48,14 +52,14 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         }
         else if (distancia > 2.5)
         {
-            _direcao = Jogador.transform.position - _rigidbodyInimigo.position;
+            Direcao = Jogador.transform.position - _rigidbodyInimigo.position;
 
-            _scriptMovimentaInimigo.Movimentar(_direcao, _statusInimigo.Velocidade);
+            _scriptMovimentaInimigo.Movimentar(Direcao, _statusInimigo.Velocidade);
             _scriptControlaAnimacao.Atacar(false);
         }
         else
         {
-            _direcao = Jogador.transform.position - _rigidbodyInimigo.position;
+            Direcao = Jogador.transform.position - _rigidbodyInimigo.position;
             _scriptControlaAnimacao.Atacar(true);
         }
     }
@@ -73,8 +77,8 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
 
         if (!ficouPertoOSuficiente)
         {
-            _direcao = _posicaoAleatoria - transform.position;
-            _scriptMovimentaInimigo.Movimentar(_direcao, _statusInimigo.Velocidade);
+            Direcao = _posicaoAleatoria - transform.position;
+            _scriptMovimentaInimigo.Movimentar(Direcao, _statusInimigo.Velocidade);
         }
     }
     Vector3 AleatorizarPosicao()
@@ -108,6 +112,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     public void Morrer()
     {
         GerarKitMedico(_porcentagemGerarKitMedico);
+        _scriptControlaInterface.AtualizarQndZumbisMortos();
 
         Destroy(gameObject);
         ControlaAudio.instancia.PlayOneShot(SomDeMorte);
