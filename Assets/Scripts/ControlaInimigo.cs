@@ -9,7 +9,9 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     [HideInInspector]
     public GameObject Jogador;
     [HideInInspector]
-    public Status _statusInimigo;
+    public Status StatusInimigo;
+    [HideInInspector]
+    public GeradorZumbi MeuGerador;
 
     public GameObject KitMedico;
     public Vector3 Direcao;
@@ -32,7 +34,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
 
         _rigidbodyInimigo = GetComponent<Rigidbody>();
 
-        _statusInimigo = GetComponent<Status>();
+        StatusInimigo = GetComponent<Status>();
         _scriptControlaAnimacao = GetComponent<ControlaAnimacao>();
         _scriptMovimentaInimigo = GetComponent<MovimentaPersonagem>();
         _scriptControlaInterface = FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;
@@ -54,7 +56,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         {
             Direcao = Jogador.transform.position - _rigidbodyInimigo.position;
 
-            _scriptMovimentaInimigo.Movimentar(Direcao, _statusInimigo.Velocidade);
+            _scriptMovimentaInimigo.Movimentar(Direcao, StatusInimigo.Velocidade);
             _scriptControlaAnimacao.Atacar(false);
         }
         else
@@ -78,7 +80,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         if (!ficouPertoOSuficiente)
         {
             Direcao = _posicaoAleatoria - transform.position;
-            _scriptMovimentaInimigo.Movimentar(Direcao, _statusInimigo.Velocidade);
+            _scriptMovimentaInimigo.Movimentar(Direcao, StatusInimigo.Velocidade);
         }
     }
     Vector3 AleatorizarPosicao()
@@ -102,8 +104,8 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
 
     public void TomarDano(int dano)
     {
-        _statusInimigo.Vida -= dano;
-        if (_statusInimigo.Vida <= 0)
+        StatusInimigo.Vida -= dano;
+        if (StatusInimigo.Vida <= 0)
         {
             Morrer();
         }
@@ -113,6 +115,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     {
         GerarKitMedico(_porcentagemGerarKitMedico);
         _scriptControlaInterface.AtualizarQndZumbisMortos();
+        MeuGerador.AtualizarQntZumbiVivos();
 
         Destroy(gameObject);
         ControlaAudio.instancia.PlayOneShot(SomDeMorte);

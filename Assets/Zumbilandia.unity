@@ -6546,7 +6546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660208ac30aef2c4bb89ce84df08a3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 3}
+  PrefabZumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679,
+    type: 3}
   TempoGerarZumbi: 3
   LayerZumbi:
     serializedVersion: 2
@@ -6854,7 +6855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660208ac30aef2c4bb89ce84df08a3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 3}
+  PrefabZumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679,
+    type: 3}
   TempoGerarZumbi: 1
   LayerZumbi:
     serializedVersion: 2
@@ -6965,7 +6967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660208ac30aef2c4bb89ce84df08a3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 3}
+  PrefabZumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679,
+    type: 3}
   TempoGerarZumbi: 1.5
   LayerZumbi:
     serializedVersion: 2
@@ -7646,7 +7649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660208ac30aef2c4bb89ce84df08a3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679, type: 3}
+  PrefabZumbi: {fileID: 1063500868937916, guid: 35861510587b7489780fe86970823679,
+    type: 3}
   TempoGerarZumbi: 1.8
   LayerZumbi:
     serializedVersion: 2
