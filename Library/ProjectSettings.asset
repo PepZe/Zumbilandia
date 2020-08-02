@@ -13,9 +13,9 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: apocalipse-zumbi-alura
-  defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  productName: Zumbilandia
+  defaultCursor: {fileID: 2800000, guid: 53ec8ac023aa16f48b373c7d8222f03c, type: 3}
+  cursorHotspot: {x: 16, y: 16}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -506,14 +506,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: apocalipse-zumbi-alura
+  metroPackageName: Zumbilandia
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: apocalipse-zumbi-alura
+  metroApplicationDescription: Zumbilandia
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
