@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 474}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 86
+  controlID: 57
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 474}
   m_MaxSize: {x: 18008, y: 14024}
   vertical: 0
-  controlID: 12
+  controlID: 120
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,20 +421,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs/Personagens
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs/Personagens
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Pedro-Git\Zumbilandia
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ae0d0000
-    m_LastClickedID: 3502
-    m_ExpandedIDs: 000000005e0b0000940b0000ae0d0000
+    scrollPos: {x: 0, y: 19}
+    m_SelectedIDs: dc0d0000
+    m_LastClickedID: 3548
+    m_ExpandedIDs: 000000005e0b0000940b0000ae0d000010130000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -493,18 +493,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000540b0000c6170000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: MovimentaJogador
-      m_OriginalName: MovimentaJogador
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 1934
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
@@ -514,7 +514,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 87}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 115
 --- !u!114 &15
@@ -581,8 +581,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9e1a0000
-      m_LastClickedID: 6814
+      m_SelectedIDs: daf1ffff
+      m_LastClickedID: -3622
       m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -638,9 +638,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -20.54969, y: 1.5845678, z: -18.686012}
+    m_Target: {x: -8.047306, y: 19.883799, z: -21.434254}
     speed: 2
-    m_Value: {x: -20.54969, y: 1.5845678, z: -18.686012}
+    m_Value: {x: -8.047306, y: 19.883799, z: -21.434254}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -672,9 +672,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.20885672, y: 0.50523555, z: -0.12750858, w: 0.8275612}
   m_Size:
-    m_Target: 40.36376
+    m_Target: 7.5964227
     speed: 2
-    m_Value: 40.36376
+    m_Value: 7.5964227
   m_Ortho:
     m_Target: 0
     speed: 2
