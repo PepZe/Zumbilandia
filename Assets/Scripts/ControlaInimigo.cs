@@ -112,10 +112,13 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     {
         GerarKitMedico(_porcentagemGerarKitMedico);
         _scriptControlaInterface.AtualizarQndZumbisMortos();
-        MeuGerador.AtualizarQntZumbiVivos();
+        _scriptControlaAnimacao.Morrer();
+        _scriptMovimentaInimigo.Morrer();
 
-        Destroy(gameObject);
+        MeuGerador.AtualizarQntZumbiVivos();
+        Destroy(gameObject, 2f);
         ControlaAudio.instancia.PlayOneShot(SomDeMorte);
+        enabled = false;
     }
 
     private void GerarKitMedico(float porcentagemGeracao)

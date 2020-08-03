@@ -18,4 +18,8 @@ public class ControlaAnimacao : MonoBehaviour
     {
         _animator.SetFloat("Movendo", direacao.magnitude);
     }
+    public void Morrer()
+    {
+        _animator.SetTrigger("Morreu");
+    }
 }
