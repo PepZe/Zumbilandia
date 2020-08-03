@@ -10,5 +10,6 @@ namespace Assets.Scripts
     {
         public const string Jogador = "Jogador";
         public const string Inimigo = "Inimigo";
+        public const string ChefeZumbi = "ChefeInimigo";
     }
 }
