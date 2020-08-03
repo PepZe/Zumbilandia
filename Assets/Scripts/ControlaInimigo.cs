@@ -35,10 +35,9 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         _scriptControlaAnimacao = GetComponent<ControlaAnimacao>();
         _scriptMovimentaInimigo = GetComponent<MovimentaPersonagem>();
         _scriptControlaInterface = FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;
-
         AleatorizarZumbi();
     }
-    void FixedUpdate()  
+    void FixedUpdate()
     {
         float distancia = Vector3.Distance(transform.position, Jogador.transform.position);
 
@@ -93,9 +92,11 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         int dano = Random.Range(20, 31);
         Jogador.GetComponent<ControlaJogador>().TomarDano(dano);
     }
+
     void AleatorizarZumbi()
     {
-        int geraTipoZumbi = Random.Range(1, 28);
+        int qntSkins = transform.childCount;
+        int geraTipoZumbi = Random.Range(1, qntSkins);
         transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
     }
 
@@ -123,7 +124,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
 
     private void GerarKitMedico(float porcentagemGeracao)
     {
-        if(Random.value <= porcentagemGeracao)
+        if (Random.value <= porcentagemGeracao)
         {
             Instantiate(KitMedico, transform.position, Quaternion.identity);
         }

@@ -22,17 +22,21 @@ public class Bala : MonoBehaviour
     private void OnTriggerEnter(Collider objetoDeColisao)
     {
         int dano = 1;
-        switch (objetoDeColisao.tag)
+        if (objetoDeColisao.tag == Tags.Inimigo || objetoDeColisao.tag == Tags.ChefeZumbi)
         {
-            case Tags.Inimigo:
-                objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(dano);
-                break;
-            case Tags.ChefeZumbi:
-                objetoDeColisao.GetComponent<ControlaChefe>().TomarDano(dano);
-                break;
-            default:
-                break;
+            objetoDeColisao.GetComponent<IMatavel>().TomarDano(dano);
         }
+        //switch (objetoDeColisao.tag)
+        //{
+        //    case Tags.Inimigo:
+        //        objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(dano);
+        //        break;
+        //    case Tags.ChefeZumbi:
+        //        objetoDeColisao.GetComponent<ControlaChefe>().TomarDano(dano);
+        //        break;
+        //    default:
+        //        break;
+        //}
 
         Destroy(gameObject);
     }

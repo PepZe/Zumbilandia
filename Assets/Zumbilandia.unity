@@ -11539,6 +11539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChefeZumbi
       objectReference: {fileID: 0}
+    - target: {fileID: 5764442510020101511, guid: 5805e655a6f1d61459f0610e98ac32f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8539117408244704856, guid: 5805e655a6f1d61459f0610e98ac32f0,
         type: 3}
       propertyPath: m_LocalPosition.x

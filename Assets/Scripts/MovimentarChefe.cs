@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimentarChefe : MovimentaPersonagem
 {
-    public void Rotacionar(Vector3 direcao)
+    public new void Rotacionar(Vector3 direcao)
     {
         Quaternion novaRotacao = Quaternion.LookRotation(direcao.normalized);
         transform.rotation = Quaternion.Slerp(transform.rotation, novaRotacao, Time.deltaTime * 10);
