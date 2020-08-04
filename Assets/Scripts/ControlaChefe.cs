@@ -6,15 +6,21 @@ using UnityEngine.AI;
 
 public class ControlaChefe : MonoBehaviour, IMatavel
 {
+    public GameObject KitMedicoPrefab;
     private GameObject _jogador;
     private NavMeshAgent _navChefe;
     private Rigidbody _rigidbody;
+
+    private ControlaInterface _scriptControlaInterface;
     private ControlaAnimacao _scriptControlaAnimacao;
     private MovimentarChefe _scriptMovimentaChefe;
     private Status _scriptStatusChefe;
 
+    private float _porcentagemGerarKitMedico = 0.8f;
+
     private void Start()
     {
+        _scriptControlaInterface = FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;
         _scriptControlaAnimacao = GetComponent<ControlaAnimacao>();
         _scriptMovimentaChefe = GetComponent<MovimentarChefe>();
         _scriptStatusChefe = GetComponent<Status>();
@@ -36,8 +42,8 @@ public class ControlaChefe : MonoBehaviour, IMatavel
             if (pertoSuficiente)
             {
                 _scriptControlaAnimacao.Atacar(true);
-                var direcao = _jogador.transform.position -_rigidbody.transform.position;
-                
+                var direcao = _jogador.transform.position - _rigidbody.transform.position;
+
 
                 _scriptMovimentaChefe.Rotacionar(direcao);
             }
@@ -65,9 +71,21 @@ public class ControlaChefe : MonoBehaviour, IMatavel
     {
         _scriptControlaAnimacao.Morrer();
         _scriptMovimentaChefe.Morrer();
+        _scriptControlaInterface.AtualizarQndZumbisMortos();
+
+        GerarKitMedico(_porcentagemGerarKitMedico);
+
         _navChefe.enabled = false;
         _rigidbody.isKinematic = false;
         enabled = false;
         Destroy(gameObject, 2f);
+    }
+
+    private void GerarKitMedico(float porcentagemGeracao)
+    {
+        if (Random.value <= porcentagemGeracao)
+        {
+            Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

@@ -66,9 +66,9 @@
     <Compile Include="Assets\Scripts\ControlaAudio.cs" />
     <Compile Include="Assets\Scripts\ControlaCamera.cs" />
     <Compile Include="Assets\Scripts\ControlaChefe.cs" />
-    <Compile Include="Assets\Scripts\ControlaInimigo.cs" />
     <Compile Include="Assets\Scripts\ControlaInterface.cs" />
     <Compile Include="Assets\Scripts\ControlaJogador.cs" />
+    <Compile Include="Assets\Scripts\ControlaZumbi.cs" />
     <Compile Include="Assets\Scripts\GeradorChefeZumbi.cs" />
     <Compile Include="Assets\Scripts\GeradorZumbi.cs" />
     <Compile Include="Assets\Scripts\ICuravel.cs" />

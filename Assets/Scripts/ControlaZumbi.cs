@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlaInimigo : MonoBehaviour, IMatavel
+public class ControlaZumbi : MonoBehaviour, IMatavel
 {
 
     [HideInInspector]

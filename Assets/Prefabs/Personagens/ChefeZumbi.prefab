@@ -444,6 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad024416d28baf4429cb41e9c5a69928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KitMedicoPrefab: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a,
+    type: 3}
 --- !u!195 &5764442510020101513
 NavMeshAgent:
   m_ObjectHideFlags: 0
