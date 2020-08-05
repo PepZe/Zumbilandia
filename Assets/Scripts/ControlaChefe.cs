@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ControlaChefe : MonoBehaviour, IMatavel
+public class ControlaChefe : ControlaZumbi, IMatavel
 {
-    public GameObject KitMedicoPrefab;
     private GameObject _jogador;
     private NavMeshAgent _navChefe;
     private Rigidbody _rigidbody;
@@ -79,13 +78,5 @@ public class ControlaChefe : MonoBehaviour, IMatavel
         _rigidbody.isKinematic = false;
         enabled = false;
         Destroy(gameObject, 2f);
-    }
-
-    private void GerarKitMedico(float porcentagemGeracao)
-    {
-        if (Random.value <= porcentagemGeracao)
-        {
-            Instantiate(KitMedicoPrefab, transform.position, Quaternion.identity);
-        }
     }
 }
