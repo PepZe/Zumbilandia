@@ -15,6 +15,7 @@ public class ControlaInterface : MonoBehaviour
     public Text TextoFimDeJogo;
     public Text TextoPontuacaoMaxima;
     public Text TextoQntZumbis;
+    public Text TextoChefeApareceu;
     private float _tempoMaximoSobrevivencia;
     private int _qntdZumbisMortos = 0;
     private const string MAXIMA_PONTUACAO = "Maxima Pontuacao";
@@ -71,4 +72,34 @@ public class ControlaInterface : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Zumbilandia");
     }
+
+    public void AparecerTextoChefeCriado()
+    {
+        StartCoroutine(DesaparecerTextoChefeCriado(1, TextoChefeApareceu));
+    }
+    IEnumerator DesaparecerTextoChefeCriado(float tempoDeSumico, Text textoParaSumir)
+    {
+        textoParaSumir.gameObject.SetActive(true);
+
+        int valorMaximoAlpha = 1;
+        var corTexto = textoParaSumir.color;
+        corTexto.a = valorMaximoAlpha;
+        textoParaSumir.color = corTexto;
+
+        yield return new WaitForSeconds(tempoDeSumico);
+
+        var contador = 0f;
+        while (textoParaSumir.color.a > 0)
+        {
+            contador += Time.deltaTime / tempoDeSumico;
+            corTexto.a = Mathf.Lerp(valorMaximoAlpha, 0, contador);
+            textoParaSumir.color = corTexto;
+            if (textoParaSumir.color.a <= 0)
+            {
+                textoParaSumir.gameObject.SetActive(false);
+            }
+            yield return null;
+        }
+    }
 }
+
