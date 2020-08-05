@@ -68,7 +68,7 @@ public class GeradorZumbi : MonoBehaviour
             yield return null;
         }
 
-        var zumbi = Instantiate(PrefabZumbi, posicaoCriacao, transform.rotation).GetComponent<ControlaZumbi>();
+        var zumbi = Instantiate(PrefabZumbi, posicaoCriacao, transform.rotation).GetComponent<ControlaInimigo>();
         zumbi.MeuGerador = this;
 
         _qntZumbis++;
