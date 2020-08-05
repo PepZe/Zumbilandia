@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ControlaChefe : ControlaZumbi, IMatavel
 {
+    public Slider SliderBarraDeVida;
+    public Image SliderImageVida;
+    public Color ColorVidaMaxima, ColorVidaMinima;
+
     private GameObject _jogador;
     private NavMeshAgent _navChefe;
     private Rigidbody _rigidbody;
@@ -29,7 +34,10 @@ public class ControlaChefe : ControlaZumbi, IMatavel
         _navChefe = GetComponent<NavMeshAgent>();
 
         _navChefe.speed = _scriptStatusChefe.Velocidade;
+        SliderBarraDeVida.value = SliderBarraDeVida.maxValue = _scriptStatusChefe.VidaMaxima;
+        SliderImageVida.color = ColorVidaMaxima;
     }
+
     private void Update()
     {
         _navChefe.SetDestination(_jogador.transform.position);
@@ -57,9 +65,12 @@ public class ControlaChefe : ControlaZumbi, IMatavel
         int dano = Random.Range(30, 50);
         _jogador.GetComponent<ControlaJogador>().TomarDano(dano);
     }
+
     public void TomarDano(int dano)
     {
         _scriptStatusChefe.Vida -= dano;
+        AtualiazrBarraDeVida();
+
         if (_scriptStatusChefe.Vida <= 0)
         {
             Morrer();
@@ -78,5 +89,12 @@ public class ControlaChefe : ControlaZumbi, IMatavel
         _rigidbody.isKinematic = false;
         enabled = false;
         Destroy(gameObject, 2f);
+    }
+
+    private void AtualiazrBarraDeVida()
+    {
+        SliderBarraDeVida.value = _scriptStatusChefe.Vida;
+        var porcentagemVida = _scriptStatusChefe.Vida / _scriptStatusChefe.VidaMaxima;
+        SliderImageVida.color = Color.Lerp(ColorVidaMinima, ColorVidaMaxima, porcentagemVida);
     }
 }

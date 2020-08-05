@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bala.cs" />
+    <Compile Include="Assets\Scripts\BillBoard.cs" />
     <Compile Include="Assets\Scripts\ControlaAnimacao.cs" />
     <Compile Include="Assets\Scripts\ControlaArma.cs" />
     <Compile Include="Assets\Scripts\ControlaAudio.cs" />
