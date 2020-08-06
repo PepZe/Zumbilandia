@@ -14,10 +14,15 @@ public class ControlaMenu : MonoBehaviour
         ButtonSair.gameObject.SetActive(true);
 #endif
     }
-
-    public void JogarJogo()
+    public void MudarCena()
     {
-        SceneManager.LoadScene("Zumbilandia");
+        StartCoroutine(JogarJogo("Zumbilandia"));
+    }
+
+    private IEnumerator JogarJogo(string nomeDaCena)
+    {
+        yield return new WaitForSecondsRealtime(0.2f);
+        SceneManager.LoadScene(nomeDaCena);
     }
 
     public void SairDoJogo()
