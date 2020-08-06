@@ -77,6 +77,7 @@ public class ControlaInterface : MonoBehaviour
     {
         StartCoroutine(DesaparecerTextoChefeCriado(1, TextoChefeApareceu));
     }
+
     IEnumerator DesaparecerTextoChefeCriado(float tempoDeSumico, Text textoParaSumir)
     {
         textoParaSumir.gameObject.SetActive(true);

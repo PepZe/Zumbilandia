@@ -24,19 +24,11 @@ public class Bala : MonoBehaviour
         int dano = 1;
         if (objetoDeColisao.tag == Tags.Inimigo || objetoDeColisao.tag == Tags.ChefeZumbi)
         {
+            var inversaoDoSentidoDeRotacao = Quaternion.LookRotation(-transform.forward);
             objetoDeColisao.GetComponent<IMatavel>().TomarDano(dano);
+            objetoDeColisao.GetComponent<IMatavel>().Sangrar(inversaoDoSentidoDeRotacao);
+
         }
-        //switch (objetoDeColisao.tag)
-        //{
-        //    case Tags.Inimigo:
-        //        objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(dano);
-        //        break;
-        //    case Tags.ChefeZumbi:
-        //        objetoDeColisao.GetComponent<ControlaChefe>().TomarDano(dano);
-        //        break;
-        //    default:
-        //        break;
-        //}
 
         Destroy(gameObject);
     }

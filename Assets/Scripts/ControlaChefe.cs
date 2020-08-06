@@ -62,8 +62,10 @@ public class ControlaChefe : ControlaZumbi, IMatavel
     }
     private void AtacaJogador()
     {
+        Quaternion inversaoDoSentidoDeRotacao = Quaternion.LookRotation(-transform.forward);
         int dano = Random.Range(30, 50);
         _jogador.GetComponent<ControlaJogador>().TomarDano(dano);
+        _jogador.GetComponent<ControlaJogador>().Sangrar(inversaoDoSentidoDeRotacao);
     }
 
     public void TomarDano(int dano)

@@ -298,7 +298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statusJogador: {fileID: 0}
-  ScriptControlaInterface: {fileID: 795395055}
   MascaraChao:
     serializedVersion: 2
     m_Bits: 256
@@ -12156,10 +12155,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barril_Fogueira (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1552275320654262, guid: f5d4c7095c7274ebf926e8ccc88e2f07, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4958319712614426, guid: f5d4c7095c7274ebf926e8ccc88e2f07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.516174
@@ -12203,11 +12198,6 @@ PrefabInstance:
     - target: {fileID: 4958319712614426, guid: f5d4c7095c7274ebf926e8ccc88e2f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8782606881708542080, guid: f5d4c7095c7274ebf926e8ccc88e2f07,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5d4c7095c7274ebf926e8ccc88e2f07, type: 3}
