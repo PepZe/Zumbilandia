@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 76
+  controlID: 53
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 119
+  controlID: 30
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 299
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -340,20 +340,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Materiais
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Materiais
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Pedro-Git\Zumbilandia
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fe300000
-    m_LastClickedID: 12542
-    m_ExpandedIDs: 00000000fe300000c2330000
+    m_SelectedIDs: ea330000
+    m_LastClickedID: 13290
+    m_ExpandedIDs: 000000000c310000de330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -381,7 +381,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe300000c2330000
+    m_ExpandedIDs: 000000000c310000de330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -409,21 +409,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000363f0000
+    m_ExpandedInstanceIDs: c6230000363f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Zumbilandia
-      m_OriginalName: Zumbilandia
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14752
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
@@ -474,7 +474,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 19
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -503,10 +503,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 36360000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6e8effffec94ffffb29affff86a0ffff62d3ffffecdeffff6afbffffee540000
+      scrollPos: {x: 0, y: 2096}
+      m_SelectedIDs: 16f1ffff
+      m_LastClickedID: -3818
+      m_ExpandedIDs: 9aefffffc4f4ffff56fbffff684a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -566,9 +566,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.4890053, y: 8.313011, z: -3.3301144}
+    m_Target: {x: 16.359272, y: -18.087294, z: -31.37451}
     speed: 2
-    m_Value: {x: -2.4890053, y: 8.313011, z: -3.3301144}
+    m_Value: {x: 16.359272, y: -18.087294, z: -31.37451}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -601,16 +601,16 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 3.753915
+    m_Target: 53.342392
     speed: 2
-    m_Value: 3.753915
+    m_Value: 53.342392
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 0.8
+    m_SpeedNormalized: 0.41
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
