@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: 722a0df54dc5ecf42b172568bdd87be3
+  - enabled: 1
+    path: Assets/Zumbilandia.unity
+    guid: 1002a819c31a06a4496af91410d2fd5f
   m_configObjects: {}
