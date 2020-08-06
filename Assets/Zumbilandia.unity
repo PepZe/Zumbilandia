@@ -298,7 +298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statusJogador: {fileID: 0}
-  ScriptControlaInterface: {fileID: 795395055}
   MascaraChao:
     serializedVersion: 2
     m_Bits: 256

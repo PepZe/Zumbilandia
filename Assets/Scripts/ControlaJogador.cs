@@ -1,23 +1,29 @@
 ﻿using Assets.Scripts;
+using UnityEditor;
 using UnityEngine;
 
 public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel
 {
     [HideInInspector]
     public Status _statusJogador;
-
+    private GameObject _particulaSangue;
     private ControlaAnimacao _scriptControlaAnimacao;
     private MovimentaJogador _scriptMovimentaJogador;
-    public ControlaInterface ScriptControlaInterface;
+    private ControlaInterface _scriptControlaInterface;
     public LayerMask MascaraChao;
     private Vector3 _direcao;
     public AudioClip SomDeDano;
 
+    private const string PATH_SANGUE_JOGADOR = "Assets/Prefabs/ParticleSangueJogador.prefab";
+
     private void Start()
     {
+        _particulaSangue = (GameObject)AssetDatabase.LoadAssetAtPath(PATH_SANGUE_JOGADOR, typeof(GameObject));
+
         _statusJogador = GetComponent<Status>();
         _scriptMovimentaJogador = GetComponent<MovimentaJogador>();
         _scriptControlaAnimacao = GetComponent<ControlaAnimacao>();
+        _scriptControlaInterface = FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;
     }
 
     void Update()
@@ -37,7 +43,7 @@ public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel
     public void TomarDano(int dano)
     {
         _statusJogador.Vida -= dano;
-        ScriptControlaInterface.AtualizarSliderVidaJogador();
+        _scriptControlaInterface.AtualizarSliderVidaJogador();
         ControlaAudio.instancia.PlayOneShot(SomDeDano);
 
         if (_statusJogador.Vida <= 0)
@@ -48,16 +54,21 @@ public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel
 
     public void Morrer()
     {
-        ScriptControlaInterface.GameOver();
+        _scriptControlaInterface.GameOver();
     }
 
     public void CurarVida(int quantidadeDeCura)
     {
         _statusJogador.Vida += quantidadeDeCura;
-        if(_statusJogador.Vida > _statusJogador.VidaMaxima)
+        if (_statusJogador.Vida > _statusJogador.VidaMaxima)
         {
             _statusJogador.Vida = _statusJogador.VidaMaxima;
         }
-        ScriptControlaInterface.AtualizarSliderVidaJogador();
+        _scriptControlaInterface.AtualizarSliderVidaJogador();
+    }
+
+    public void Sangrar(Quaternion rotacao)
+    {
+        Instantiate(_particulaSangue, transform.position, rotacao);
     }
 }
